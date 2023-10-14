@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subdomain Redirect</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const subdomain = window.location.hostname.split('.')[0];
+
+        switch (subdomain) {
+            case 'jes':
+                window.location.href = 'https://johnsones.sspcschools.com';
+                break;
+            case 'mms':
+                window.location.href = 'https://monroems.sspcschools.com';
+                break;
+            default:
+                // Redirect to default website if subdomain is unknown
+                window.location.href = 'https://sspcschools.com';
+                break;
+        }
+    </script>
+</body>
+</html>
